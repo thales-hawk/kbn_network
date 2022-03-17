@@ -1,18 +1,18 @@
 {
   "id": "kbnNetwork",
+  "owner": {
+    "name": "dlumbrer",
+    "githubTeam": "dlumbrer"
+  },
   "version": "7.10.0",
+  "kibanaVersion": "kibana",
   "server": false,
   "ui": true,
   "requiredPlugins": [
     "visualizations",
-    "data",
-    "inspector",
-    "kibanaLegacy"
+    "expressions",
+    "data"
   ],
   "requiredBundles": [
-    "kibanaUtils",
-    "visDefaultEditor",
-    "share",
-    "charts"
   ]
 }

@@ -1,30 +1,33 @@
-/*
- * Licensed to Elasticsearch B.V. under one or more contributor
- * license agreements. See the NOTICE file distributed with
- * this work for additional information regarding copyright
- * ownership. Elasticsearch B.V. licenses this file to you under
- * the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License.
+/**
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *    http://www.apache.org/licenses/LICENSE-2.0
+ *         http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 import { PluginInitializerContext, CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
 import { VisualizationsSetup } from '../../../src/plugins/visualizations/public';
 
-import { kbnNetworkVisTypeDefinition } from './kbn-network-vis';
-
 import { DataPublicPluginStart } from '../../../src/plugins/data/public';
-import { setFormatService, setKibanaLegacy, setNotifications, setQueryService, setSearchService } from './services';
+// import {
+//   setFormatService,
+//   setKibanaLegacy,
+//   setNotifications,
+//   setQueryService,
+//   setSearchService,
+// } from './services';
 import { KibanaLegacyStart } from '../../../src/plugins/kibana_legacy/public';
-
+import { KbnNetworkVisSetupDependencies, KbnNetworkVisStartDependencies } from './types';
+import { getKbnNetworkVisRenderer } from './kbn_network_vis_renderer';
+import { createKbnNetworkVisFn } from './kbn_network_vis_fn';
+import { kbnNetworkVisTypeDefinition } from './kbn_network_vis_type';
 
 /** @internal */
 export interface TablePluginSetupDependencies {
@@ -48,19 +51,18 @@ export class KbnNetworkPlugin implements Plugin<Promise<void>, void> {
 
   public async setup(
     core: CoreSetup,
-    { visualizations }: TablePluginSetupDependencies
+    { visualizations, expressions }: KbnNetworkVisSetupDependencies
   ) {
-    visualizations.createBaseVisualization(
-      kbnNetworkVisTypeDefinition(core, this.initializerContext)
-    );
-
+    visualizations.createBaseVisualization(kbnNetworkVisTypeDefinition);
+    expressions.registerFunction(createKbnNetworkVisFn());
+    expressions.registerRenderer(getKbnNetworkVisRenderer());
   }
 
-  public start(core: CoreStart, { data, kibanaLegacy }: TablePluginStartDependencies) {
-    setFormatService(data.fieldFormats);
-    setKibanaLegacy(kibanaLegacy);
-    setNotifications(core.notifications);
-    setQueryService(data.query);
-    setSearchService(data.search);
+  public start(core: CoreStart, {}: KbnNetworkVisStartDependencies) {
+    // setFormatService(data.fieldFormats);
+    // setKibanaLegacy(kibanaLegacy);
+    // setNotifications(core.notifications);
+    // setQueryService(data.query);
+    // setSearchService(data.search);
   }
 }
