@@ -1,6 +1,6 @@
 {
   "name": "kbn_network",
-  "version": "7.10.0",
+  "version": "7.16.3",
   "description": "Network plugin for visualizing networks",
   "authors": [
     "David Moreno Lumbreras <dmorenolumb@gmail.com>"
