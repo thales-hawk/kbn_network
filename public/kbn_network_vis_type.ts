@@ -13,11 +13,8 @@
  */
 
 import { i18n } from '@kbn/i18n';
-import { AggGroupNames } from '../../../src/plugins/data/public';
-import {
-  VisTypeDefinition,
-  VIS_EVENT_TO_TRIGGER,
-} from '../../../src/plugins/visualizations/public';
+import { AggGroupNames } from '@kbn/data-plugin/public';
+import { VisTypeDefinition } from '@kbn/visualizations-plugin/public';
 import './index.scss';
 import image from './images/icon-network.svg';
 import { KbnNetworkVisParamsExp } from './types';

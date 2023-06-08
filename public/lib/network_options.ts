@@ -18,38 +18,24 @@ export class NetworkOptions {
   constructor(private data: { edges: any[]; nodes: any[] }) {}
 
   private getEdgeArrowsConfig(visParams: KbnNetworkVisParams) {
+    const block = {
+      enabled: visParams.displayArrow,
+      scaleFactor: visParams.scaleArrow,
+      type: visParams.shapeArrow,
+    };
+
     switch (visParams.posArrow) {
-      case 'from':
-        return {
-          from: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow,
-          },
-        };
       case 'middle':
         return {
-          middle: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow,
-          },
+          middle: block,
         };
       case 'to':
         return {
-          to: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow,
-          },
+          to: block,
         };
       default:
         return {
-          from: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow,
-          },
+          from: block,
         };
     }
   }
@@ -83,7 +69,7 @@ export class NetworkOptions {
         },
       },
       layout: {
-        improvedLayout: !(this.data.edges.length > 200),
+        improvedLayout: this.data.edges.length <= 200,
       },
       interaction: {
         hover: true,

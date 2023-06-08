@@ -15,9 +15,9 @@
 import {
   EsaggsExpressionFunctionDefinition,
   IndexPatternLoadExpressionFunctionDefinition,
-} from '../../../src/plugins/data/public';
-import { buildExpression, buildExpressionFunction } from '../../../src/plugins/expressions/public';
-import { getVisSchemas, SchemaConfig, Vis } from '../../../src/plugins/visualizations/public';
+} from '@kbn/data-plugin/public';
+import { buildExpression, buildExpressionFunction } from '@kbn/expressions-plugin/public';
+import { getVisSchemas, SchemaConfig, Vis } from '@kbn/visualizations-plugin/public';
 import { Arguments, KbnNetworkVisExpressionFunctionDefinition } from './kbn_network_vis_fn';
 import { KbnNetworkVisParamsExp } from './types';
 

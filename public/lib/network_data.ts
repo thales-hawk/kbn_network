@@ -14,7 +14,7 @@
 
 import _ from 'lodash';
 import randomColor from 'randomcolor';
-import { Datatable, DatatableColumn, DatatableRow } from '../../../../src/plugins/expressions';
+import { Datatable, DatatableColumn, DatatableRow } from '@kbn/expressions-plugin/common';
 import { KbnNetworkVisParams } from '../types';
 
 export const nodeShapes = [
@@ -55,7 +55,7 @@ interface EdgeOptions {
 export class NetworkData {
   constructor(private visParams: KbnNetworkVisParams) {}
 
-  private getTooltipTitle(termName, termValue, sizeTerm = null, sizeValue = null) {
+  private getTooltipTitle(termName: string, termValue: string, sizeTerm = null, sizeValue = null) {
     let tooltipTitle = `${termName}: ${termValue}`;
     if (sizeTerm !== null) {
       tooltipTitle += `\n${sizeTerm}: ${sizeValue}`;
@@ -66,17 +66,17 @@ export class NetworkData {
   private getColumns(visData: Datatable) {
     return {
       sizeNodeMetric: visData.columns.find(
-        (column) => column.meta.sourceParams.schema === 'size_node'
+        (column) => column.meta.sourceParams?.schema === 'size_node'
       ),
       sizeEdgeMetric: visData.columns.find(
-        (column) => column.meta.sourceParams.schema === 'size_edge'
+        (column) => column.meta.sourceParams?.schema === 'size_edge'
       ),
-      nodeBuckets: visData.columns.filter((column) => column.meta.sourceParams.schema === 'first'),
+      nodeBuckets: visData.columns.filter((column) => column.meta.sourceParams?.schema === 'first'),
       relationBucket: visData.columns.find(
-        (column) => column.meta.sourceParams.schema === 'second'
+        (column) => column.meta.sourceParams?.schema === 'second'
       ),
       colorNodeBucket: visData.columns.find(
-        (column) => column.meta.sourceParams.schema === 'colornode'
+        (column) => column.meta.sourceParams?.schema === 'colornode'
       ),
     };
   }
@@ -129,7 +129,7 @@ export class NetworkData {
   }
 
   private getNodeColors(visData: Datatable, colorNodeColumn?: DatatableColumn): NodeColors {
-    const colors = {};
+    const colors: { [rowValue: string]: string } = {};
 
     if (colorNodeColumn) {
       for (const row of visData.rows) {
@@ -154,7 +154,7 @@ export class NetworkData {
     const nodeColors = this.getNodeColors(visData, colorNodeColumn);
 
     const sourceNodes = this.getNodes(sourceNodeColumn, visData, {
-      shape: (this.visParams.shapeFirstNode as unknown) as VisNetworkNodeShape,
+      shape: this.visParams.shapeFirstNode as unknown as VisNetworkNodeShape,
       value: (row) => (nodeSizeColumn ? row[nodeSizeColumn.id] : 1),
       color: (row) =>
         (colorNodeColumn && nodeColors[row[colorNodeColumn.id]]) || this.visParams.firstNodeColor,
@@ -175,7 +175,7 @@ export class NetworkData {
 
     if (destNodeColumn) {
       destNodes = this.getNodes(destNodeColumn, visData, {
-        shape: (this.visParams.shapeSecondNode as unknown) as VisNetworkNodeShape,
+        shape: this.visParams.shapeSecondNode as unknown as VisNetworkNodeShape,
         value: (_row) => 1,
         color: (row) =>
           (colorNodeColumn && nodeColors[row[colorNodeColumn.id]]) ||

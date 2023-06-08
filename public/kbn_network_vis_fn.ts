@@ -14,15 +14,9 @@
 
 import { i18n } from '@kbn/i18n';
 import _ from 'lodash';
-import {
-  ExpressionFunctionDefinition,
-  Datatable,
-  Range,
-  Render,
-  Style,
-} from '../../../src/plugins/expressions/public';
-import { DimensionsVisParam, KbnNetworkVisParams } from './types';
-import { prepareLogTable, Dimension } from '../../../src/plugins/visualizations/public';
+import { ExpressionFunctionDefinition, Datatable, Render } from '@kbn/expressions-plugin/public';
+import { prepareLogTable, Dimension } from '@kbn/visualizations-plugin/public';
+import { KbnNetworkVisParams } from './types';
 
 export type Input = Datatable;
 

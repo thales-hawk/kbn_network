@@ -196,7 +196,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "../../node_modules/@kbn/optimizer/target_node/worker/entry_point_creator.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "../../node_modules/@kbn/optimizer/target_node/src/worker/entry_point_creator.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -208,25 +208,25 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(1073);
+module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(2);
 
 /***/ }),
 
-/***/ "../../node_modules/@kbn/optimizer/target_node/worker/entry_point_creator.js":
-/*!***********************************************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/@kbn/optimizer/target_node/worker/entry_point_creator.js ***!
-  \***********************************************************************************************************************************************/
+/***/ "../../node_modules/@kbn/optimizer/target_node/src/worker/entry_point_creator.js":
+/*!************************************************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/@kbn/optimizer/target_node/src/worker/entry_point_creator.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../../../../../../../../../../.cache/bazel/_bazel_hawk/43445bbdc1cf00191adf979420996538/execroot/kibana/node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../../../../../../.cache/bazel/_bazel_hawk/43445bbdc1cf00191adf979420996538/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/public_path_module_creator.js */ "../../node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../../../.cache/bazel/_bazel_hawk/43445bbdc1cf00191adf979420996538/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/public_path_module_creator.js");__kbnBundles__.define('plugin/kbnNetwork/public', __webpack_require__, /*require.resolve*/(/*! ../../../../../plugins/kbn_network/public */ "./public/index.ts"))
+__webpack_require__(/*! ../../../../../../../../../../.cache/bazel/_bazel_hawk/77c5c1624fed9c6923fd0a1768ebd68e/execroot/kibana/node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../../../../../.cache/bazel/_bazel_hawk/77c5c1624fed9c6923fd0a1768ebd68e/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/src/public_path_module_creator.js */ "../../node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../.cache/bazel/_bazel_hawk/77c5c1624fed9c6923fd0a1768ebd68e/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/src/public_path_module_creator.js");__kbnBundles__.define('plugin/kbnNetwork/public', __webpack_require__, /*require.resolve*/(/*! ../../../../../../plugins/kbn_network/public */ "./public/index.ts"))
 
 /***/ }),
 
-/***/ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/src/index.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8dark":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-0-1!/home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/postcss-loader/src??ref--6-oneOf-0-2!/home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-0-3!./public/index.scss?v8dark ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/dist/cjs.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8dark":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-0-1!/home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/postcss-loader/dist/cjs.js??ref--6-oneOf-0-2!/home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-0-3!./public/index.scss?v8dark ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -234,17 +234,17 @@ __webpack_require__(/*! ../../../../../../../../../../../.cache/bazel/_bazel_haw
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n", "",{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,8BAA8B;EAC9B,uBAAuB,EAAE;;AAE3B;EACE,WAAW;EACX,YAAY,EAAE;;AAEhB;EACE,kBAAkB;EAClB,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;EACnB,eAAe;EACf,cAAc;EACd,wCAAwC;EAGxC,kBAAkB;EAClB,yBAAyB;EACzB,2CAA2C;EAC3C,oBAAoB,EAAE;;AAExB;EACE,YAAY;EACZ,kBAAkB;EAClB,qBAAqB,EAAE;;AAEzB;EACE,YAAY;EACZ,YAAY;EACZ,cAAc;EACd,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB,EAAE","file":"index.scss","sourcesContent":["/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n"]}]);
+exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/**\n * For quickly applying a full-height element whether using flex or not\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */.embPanel__content[data-error],.embPanel__content[data-loading]{filter:none!important;pointer-events:all!important}.network-vis{height:100%;width:100%}div.vis-tooltip{background-color:#222222ed;border:1px solid #808074;border-radius:3px;box-shadow:3px 3px 10px #0003;color:#ecf0f1;font-size:14px;padding:5px;pointer-events:none;position:absolute;visibility:hidden;white-space:nowrap}#errorHtml h1{background-color:red}#errorHtml h1,.loading_msg{color:#fff;text-align:center}.loading_msg{background-color:#006bb4;height:50px;line-height:40px;width:150px}", "",{"version":3,"sources":["/home/hawk/development/hawk/migration_8.6.2/kibana/plugins/kbn_network/public/index.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;;EAEE,CACF,gEAEE,qBAAuB,CADvB,4BACyB,CAE3B,aAEE,WAAY,CADZ,UACc,CAEhB,gBAOE,0BAAwC,CAIxC,wBAAyB,CADzB,iBAAkB,CAElB,6BAA2C,CAN3C,aAAc,CADd,cAAe,CAFf,WAAY,CAUZ,mBAAoB,CAZpB,iBAAkB,CAClB,iBAAkB,CAElB,kBASsB,CAExB,cAGE,oBAAuB,CAEzB,2BAJE,UAAY,CACZ,iBASmB,CANrB,aAIE,wBAAyB,CAHzB,WAAY,CAKZ,gBAAiB,CAJjB,WAImB","file":"index.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/**\n * For quickly applying a full-height element whether using flex or not\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n"]}]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 
-/***/ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/src/index.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8light":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!/home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/postcss-loader/src??ref--6-oneOf-1-2!/home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-1-3!./public/index.scss?v8light ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/dist/cjs.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8light":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!/home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/postcss-loader/dist/cjs.js??ref--6-oneOf-1-2!/home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-1-3!./public/index.scss?v8light ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -252,7 +252,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n", "",{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,8BAA8B;EAC9B,uBAAuB,EAAE;;AAE3B;EACE,WAAW;EACX,YAAY,EAAE;;AAEhB;EACE,kBAAkB;EAClB,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;EACnB,eAAe;EACf,cAAc;EACd,wCAAwC;EAGxC,kBAAkB;EAClB,yBAAyB;EACzB,2CAA2C;EAC3C,oBAAoB,EAAE;;AAExB;EACE,YAAY;EACZ,kBAAkB;EAClB,qBAAqB,EAAE;;AAEzB;EACE,YAAY;EACZ,YAAY;EACZ,cAAc;EACd,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB,EAAE","file":"index.scss","sourcesContent":["/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n"]}]);
+exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/**\n * For quickly applying a full-height element whether using flex or not\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */.embPanel__content[data-error],.embPanel__content[data-loading]{filter:none!important;pointer-events:all!important}.network-vis{height:100%;width:100%}div.vis-tooltip{background-color:#222222ed;border:1px solid #808074;border-radius:3px;box-shadow:3px 3px 10px #0003;color:#ecf0f1;font-size:14px;padding:5px;pointer-events:none;position:absolute;visibility:hidden;white-space:nowrap}#errorHtml h1{background-color:red}#errorHtml h1,.loading_msg{color:#fff;text-align:center}.loading_msg{background-color:#006bb4;height:50px;line-height:40px;width:150px}", "",{"version":3,"sources":["/home/hawk/development/hawk/migration_8.6.2/kibana/plugins/kbn_network/public/index.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;;EAEE,CACF,gEAEE,qBAAuB,CADvB,4BACyB,CAE3B,aAEE,WAAY,CADZ,UACc,CAEhB,gBAOE,0BAAwC,CAIxC,wBAAyB,CADzB,iBAAkB,CAElB,6BAA2C,CAN3C,aAAc,CADd,cAAe,CAFf,WAAY,CAUZ,mBAAoB,CAZpB,iBAAkB,CAClB,iBAAkB,CAElB,kBASsB,CAExB,cAGE,oBAAuB,CAEzB,2BAJE,UAAY,CACZ,iBASmB,CANrB,aAIE,wBAAyB,CAHzB,WAAY,CAKZ,gBAAiB,CAJjB,WAImB","file":"index.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/**\n * For quickly applying a full-height element whether using flex or not\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.embPanel__content[data-error], .embPanel__content[data-loading] {\n  pointer-events: all !important;\n  filter: none !important; }\n\n.network-vis {\n  width: 100%;\n  height: 100%; }\n\ndiv.vis-tooltip {\n  position: absolute;\n  visibility: hidden;\n  padding: 5px;\n  white-space: nowrap;\n  font-size: 14px;\n  color: #ecf0f1;\n  background-color: rgba(34, 34, 34, 0.93);\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  border: 1px solid #808074;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n  pointer-events: none; }\n\n#errorHtml h1 {\n  color: white;\n  text-align: center;\n  background-color: red; }\n\n.loading_msg {\n  height: 50px;\n  width: 150px;\n  color: #FFFFFF;\n  background-color: #006BB4;\n  text-align: center;\n  line-height: 40px; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -260,9 +260,9 @@ module.exports = exports;
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/runtime/api.js":
-/*!*********************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/css-loader/dist/runtime/api.js ***!
-  \*********************************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/css-loader/dist/runtime/api.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -365,9 +365,9 @@ function toComment(sourceMap) {
 /***/ }),
 
 /***/ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!********************************************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \********************************************************************************************************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -644,10 +644,10 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "../../node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../../../.cache/bazel/_bazel_hawk/43445bbdc1cf00191adf979420996538/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/public_path_module_creator.js":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /home/hawk/development/hawk/7.16.2/infrastructure/hawk_dev/kibana/node_modules/val-loader/dist/cjs.js?key=kbnNetwork!/home/hawk/.cache/bazel/_bazel_hawk/43445bbdc1cf00191adf979420996538/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/public_path_module_creator.js ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../node_modules/val-loader/dist/cjs.js?key=kbnNetwork!../../../../../../.cache/bazel/_bazel_hawk/77c5c1624fed9c6923fd0a1768ebd68e/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/src/public_path_module_creator.js":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/hawk/development/hawk/migration_8.6.2/kibana/node_modules/val-loader/dist/cjs.js?key=kbnNetwork!/home/hawk/.cache/bazel/_bazel_hawk/77c5c1624fed9c6923fd0a1768ebd68e/execroot/kibana/bazel-out/k8-fastbuild/bin/packages/kbn-ui-shared-deps-npm/target_node/src/public_path_module_creator.js ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -662,7 +662,7 @@ __webpack_require__.p = window.__kbnPublicPath__['kbnNetwork']
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(402);
+module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(422);
 
 /***/ }),
 
@@ -1227,6 +1227,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function ColorSection({
   stateParams,
   setValue
@@ -1323,6 +1324,7 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 
 
 
@@ -1461,6 +1463,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function ExtraSection({
   stateParams,
   setValue
@@ -1551,10 +1554,10 @@ function KbnNetworkOptions(props) {
   return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
     className: "kbn-network-vis-params"
   }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_color_section__WEBPACK_IMPORTED_MODULE_2__["ColorSection"], props), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiSpacer"], null), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_size_section__WEBPACK_IMPORTED_MODULE_4__["SizeSection"], props), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiSpacer"], null), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_node_shape_section__WEBPACK_IMPORTED_MODULE_5__["NodeShapeSection"], props), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiSpacer"], null), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_directional_edges_section__WEBPACK_IMPORTED_MODULE_3__["DirectionalEdgesSection"], props), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiSpacer"], null), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_extra_section__WEBPACK_IMPORTED_MODULE_6__["ExtraSection"], props), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiSpacer"], null), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_network_constants_section__WEBPACK_IMPORTED_MODULE_7__["NetworkConstantsSection"], props));
-} // default export required for React.Lazy
+}
+
+// default export required for React.Lazy
 // eslint-disable-next-line import/no-default-export
-
-
 
 
 /***/ }),
@@ -1590,6 +1593,7 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 
 
 
@@ -1672,6 +1676,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const options = _lib_network_data__WEBPACK_IMPORTED_MODULE_4__["nodeShapes"].map(nodeShape => ({
   value: nodeShape,
   text: lodash__WEBPACK_IMPORTED_MODULE_0___default.a.capitalize(nodeShape)
@@ -1746,6 +1751,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function SizeSection({
   stateParams,
   setValue
@@ -1815,14 +1821,6 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 
 switch (window.__kbnThemeTag__) {
-  case 'v7dark':
-    console.error(new Error("SASS files in [kbnNetwork] were not built for theme [v7dark]. Styles were compiled using the [v8dark] theme instead to keep Kibana somewhat usable. Please adjust the advanced settings to make use of [v8dark,v8light] or make sure the KBN_OPTIMIZER_THEMES environment variable includes [v7dark] in a comma separated list of themes you want to compile. You can also set it to \"*\" to build all themes."));
-    return __webpack_require__(/*! ./index.scss?v8dark */ "./public/index.scss?v8dark")
-
-  case 'v7light':
-    console.error(new Error("SASS files in [kbnNetwork] were not built for theme [v7light]. Styles were compiled using the [v8light] theme instead to keep Kibana somewhat usable. Please adjust the advanced settings to make use of [v8dark,v8light] or make sure the KBN_OPTIMIZER_THEMES environment variable includes [v7light] in a comma separated list of themes you want to compile. You can also set it to \"*\" to build all themes."));
-    return __webpack_require__(/*! ./index.scss?v8light */ "./public/index.scss?v8light")
-
   case 'v8dark':
     return __webpack_require__(/*! ./index.scss?v8dark */ "./public/index.scss?v8dark");
 
@@ -1840,7 +1838,7 @@ switch (window.__kbnThemeTag__) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-0-1!../../../node_modules/postcss-loader/src??ref--6-oneOf-0-2!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-0-3!./index.scss?v8dark */ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/src/index.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8dark");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-0-1!../../../node_modules/postcss-loader/dist/cjs.js??ref--6-oneOf-0-2!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-0-3!./index.scss?v8dark */ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/dist/cjs.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8dark");
 
             content = content.__esModule ? content.default : content;
 
@@ -1869,7 +1867,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!../../../node_modules/postcss-loader/src??ref--6-oneOf-1-2!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-1-3!./index.scss?v8light */ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/src/index.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8light");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!../../../node_modules/postcss-loader/dist/cjs.js??ref--6-oneOf-1-2!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-1-3!./index.scss?v8light */ "../../node_modules/css-loader/dist/cjs.js?!../../node_modules/postcss-loader/dist/cjs.js?!../../node_modules/sass-loader/dist/cjs.js?!./public/index.scss?v8light");
 
             content = content.__esModule ? content.default : content;
 
@@ -1958,6 +1956,7 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 
 
 
@@ -2136,47 +2135,38 @@ const createKbnNetworkVisFn = () => ({
       })
     }
   },
-
   fn(input, args, handlers) {
     var _handlers$inspectorAd;
-
     if (handlers !== null && handlers !== void 0 && (_handlers$inspectorAd = handlers.inspectorAdapters) !== null && _handlers$inspectorAd !== void 0 && _handlers$inspectorAd.tables) {
       const argsTable = [];
-
       if (args.sizeNode) {
         argsTable.push([args.sizeNode, _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('kbnNetwork.function.dimension.sizeNode', {
           defaultMessage: 'Size node metric'
         })]);
       }
-
       if (args.sizeEdge) {
         argsTable.push([args.sizeEdge, _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('kbnNetwork.function.dimension.sizeEdge', {
           defaultMessage: 'Size edge metric'
         })]);
       }
-
       if (args.sizeEdge) {
         argsTable.push([args.sizeEdge, _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('kbnNetwork.function.dimension.sizeEdge', {
           defaultMessage: 'Size edge metric'
         })]);
       }
-
       if (args.node) {
         argsTable.push([args.node, _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('kbnNetwork.function.dimension.node', {
           defaultMessage: 'Node buckets'
         })]);
       }
-
       if (args.relation) {
         argsTable.push([args.relation, _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('kbnNetwork.function.dimension.relation', {
           defaultMessage: 'Relation bucket'
         })]);
       }
-
       const logTable = Object(_src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_2__["prepareLogTable"])(input, argsTable);
       handlers.inspectorAdapters.tables.logDatatable('default', logTable);
     }
-
     const visParams = {
       aggs: {
         sizeNode: args.sizeNode,
@@ -2196,7 +2186,6 @@ const createKbnNetworkVisFn = () => ({
       }
     };
   }
-
 });
 
 /***/ }),
@@ -2236,6 +2225,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 // @ts-ignore
 const KbnNetworkVisComponent = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["lazy"])(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./components/kbn_network_vis_component */ "./public/components/kbn_network_vis_component.tsx")));
 const getKbnNetworkVisRenderer = () => ({
@@ -2250,11 +2240,9 @@ const getKbnNetworkVisRenderer = () => ({
       Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["unmountComponentAtNode"])(domNode);
     });
     let error = '';
-
-    if (visParams.aggs.relation && visParams.aggs.node.length > 1) {
+    if (visParams.aggs.relation && visParams.aggs.node && visParams.aggs.node.length > 1) {
       error = 'You can only choose Node-Node or Node-Relation';
     }
-
     Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_2__["VisualizationContainer"], {
       className: "kbnNetworkVis",
       showNoResult: visData.rows.length === 0,
@@ -2307,8 +2295,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // define the visType object, which kibana will use to display and configure new Vis object of this type.
 
+
+
+// define the visType object, which kibana will use to display and configure new Vis object of this type.
 const kbnNetworkVisTypeDefinition = {
   name: 'kbn_network',
   title: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeKbnNetwork.visTitle', {
@@ -2436,40 +2426,49 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 const nodeShapes = ['dot', 'circle', 'ellipse', 'database', 'box', 'text', 'diamond', 'start', 'triangle', 'triangleDown', 'square'];
 class NetworkData {
   constructor(visParams) {
     this.visParams = visParams;
   }
-
   getTooltipTitle(termName, termValue, sizeTerm = null, sizeValue = null) {
     let tooltipTitle = `${termName}: ${termValue}`;
-
     if (sizeTerm !== null) {
       tooltipTitle += `\n${sizeTerm}: ${sizeValue}`;
     }
-
     return tooltipTitle;
   }
-
   getColumns(visData) {
     return {
-      sizeNodeMetric: visData.columns.find(column => column.meta.sourceParams.schema === 'size_node'),
-      sizeEdgeMetric: visData.columns.find(column => column.meta.sourceParams.schema === 'size_edge'),
-      nodeBuckets: visData.columns.filter(column => column.meta.sourceParams.schema === 'first'),
-      relationBucket: visData.columns.find(column => column.meta.sourceParams.schema === 'second'),
-      colorNodeBucket: visData.columns.find(column => column.meta.sourceParams.schema === 'colornode')
+      sizeNodeMetric: visData.columns.find(column => {
+        var _column$meta$sourcePa;
+        return ((_column$meta$sourcePa = column.meta.sourceParams) === null || _column$meta$sourcePa === void 0 ? void 0 : _column$meta$sourcePa.schema) === 'size_node';
+      }),
+      sizeEdgeMetric: visData.columns.find(column => {
+        var _column$meta$sourcePa2;
+        return ((_column$meta$sourcePa2 = column.meta.sourceParams) === null || _column$meta$sourcePa2 === void 0 ? void 0 : _column$meta$sourcePa2.schema) === 'size_edge';
+      }),
+      nodeBuckets: visData.columns.filter(column => {
+        var _column$meta$sourcePa3;
+        return ((_column$meta$sourcePa3 = column.meta.sourceParams) === null || _column$meta$sourcePa3 === void 0 ? void 0 : _column$meta$sourcePa3.schema) === 'first';
+      }),
+      relationBucket: visData.columns.find(column => {
+        var _column$meta$sourcePa4;
+        return ((_column$meta$sourcePa4 = column.meta.sourceParams) === null || _column$meta$sourcePa4 === void 0 ? void 0 : _column$meta$sourcePa4.schema) === 'second';
+      }),
+      colorNodeBucket: visData.columns.find(column => {
+        var _column$meta$sourcePa5;
+        return ((_column$meta$sourcePa5 = column.meta.sourceParams) === null || _column$meta$sourcePa5 === void 0 ? void 0 : _column$meta$sourcePa5.schema) === 'colornode';
+      })
     };
   }
-
   getNodes(column, visData, options) {
     if (!column) {
       return [];
     }
-
     const nodes = visData.rows.map(row => {
       const value = options.value(row);
-
       if (value >= this.visParams.minCutMetricSizeNode) {
         return {
           id: row[column.id],
@@ -2484,7 +2483,6 @@ class NetworkData {
     });
     return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.compact(lodash__WEBPACK_IMPORTED_MODULE_0___default.a.uniqBy(nodes, 'id'));
   }
-
   getEdges(sourceColumn, destColumn, visData, options) {
     return visData.rows.map(row => ({
       from: row[sourceColumn.id],
@@ -2493,33 +2491,26 @@ class NetworkData {
       value: options.value(row)
     }));
   }
-
   getRandomColor(unvailableColors) {
     while (true) {
       const color = randomcolor__WEBPACK_IMPORTED_MODULE_1___default()();
-
       if (unvailableColors.indexOf(color) === -1) {
         return color;
       }
     }
   }
-
   getNodeColors(visData, colorNodeColumn) {
     const colors = {};
-
     if (colorNodeColumn) {
       for (const row of visData.rows) {
         const rowValue = row[colorNodeColumn.id];
-
         if (!colors[rowValue]) {
           colors[rowValue] = this.getRandomColor(lodash__WEBPACK_IMPORTED_MODULE_0___default.a.toArray(colors));
         }
       }
     }
-
     return colors;
   }
-
   from(visData) {
     const columns = this.getColumns(visData);
     const sourceNodeColumn = columns.nodeBuckets[0];
@@ -2539,7 +2530,6 @@ class NetworkData {
     });
     let destNodes = [];
     let edges = [];
-
     if (destNodeColumn) {
       destNodes = this.getNodes(destNodeColumn, visData, {
         shape: this.visParams.shapeSecondNode,
@@ -2553,12 +2543,10 @@ class NetworkData {
         value: row => edgeSizeColumn ? row[edgeSizeColumn.id] : 1,
         color: row => colorNodeColumn && nodeColors[row[colorNodeColumn.id]] || this.visParams.edgeColor
       });
-
       if (columns.relationBucket) {
         edges = edges.filter(edge => !!sourceNodes.find(sourceNode => sourceNode.id === edge.to));
       }
     }
-
     const nodes = columns.relationBucket ? sourceNodes : lodash__WEBPACK_IMPORTED_MODULE_0___default.a.unionBy([...sourceNodes, ...destNodes], 'id');
     return {
       nodes,
@@ -2566,7 +2554,6 @@ class NetworkData {
       nodeColors
     };
   }
-
 }
 
 /***/ }),
@@ -2587,7 +2574,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kbn_network_vis_fn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./kbn_network_vis_fn */ "./public/kbn_network_vis_fn.ts");
 /* harmony import */ var _kbn_network_vis_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./kbn_network_vis_type */ "./public/kbn_network_vis_type.ts");
 
-
 /**
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2601,13 +2587,8 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// import {
-//   setFormatService,
-//   setKibanaLegacy,
-//   setNotifications,
-//   setQueryService,
-//   setSearchService,
-// } from './services';
+
+
 
 
 
@@ -2617,12 +2598,9 @@ __webpack_require__.r(__webpack_exports__);
 class KbnNetworkPlugin {
   constructor(initializerContext) {
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "initializerContext", void 0);
-
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "createBaseVisualization", void 0);
-
     this.initializerContext = initializerContext;
   }
-
   async setup(core, {
     visualizations,
     expressions
@@ -2631,14 +2609,7 @@ class KbnNetworkPlugin {
     expressions.registerFunction(Object(_kbn_network_vis_fn__WEBPACK_IMPORTED_MODULE_2__["createKbnNetworkVisFn"])());
     expressions.registerRenderer(Object(_kbn_network_vis_renderer__WEBPACK_IMPORTED_MODULE_1__["getKbnNetworkVisRenderer"])());
   }
-
-  start(core, {}) {// setFormatService(data.fieldFormats);
-    // setKibanaLegacy(kibanaLegacy);
-    // setNotifications(core.notifications);
-    // setQueryService(data.query);
-    // setSearchService(data.search);
-  }
-
+  start(core, {}) {}
 }
 
 /***/ }),
@@ -2677,18 +2648,14 @@ const prepareDimension = params => {
   const visdimension = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpressionFunction"])('visdimension', {
     accessor: params.accessor
   });
-
   if (params.format) {
     visdimension.addArgument('format', params.format.id);
     visdimension.addArgument('formatParams', JSON.stringify(params.format.params));
   }
-
   return Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])([visdimension]);
 };
-
 const toExpressionAst = (vis, params) => {
   var _schemas$size_node, _schemas$size_edge, _schemas$first, _schemas$second;
-
   const esaggs = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpressionFunction"])('esaggs', {
     index: Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])([Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpressionFunction"])('indexPatternLoad', {
       id: vis.data.indexPattern.id

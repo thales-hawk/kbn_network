@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(105);
+module.exports = (__webpack_require__(/*! dll-reference __kbnSharedDeps_npm__ */ "dll-reference __kbnSharedDeps_npm__"))(171);
 
 /***/ }),
 
@@ -11409,7 +11409,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vis_network__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vis_network__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _lib_network_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/network_data */ "./public/lib/network_data.ts");
 /* harmony import */ var _lib_network_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/network_options */ "./public/lib/network_options.ts");
-/* harmony import */ var _components_legend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/legend */ "./public/components/legend/index.tsx");
+/* harmony import */ var _legend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./legend */ "./public/components/legend/index.tsx");
 /* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
 /* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_6__);
 /**
@@ -11455,7 +11455,7 @@ function KbnNetworkComponent({
       width: '100%',
       height: '100%'
     }
-  }, visParams.showColorLegend && data && Object(_emotion_react__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_components_legend__WEBPACK_IMPORTED_MODULE_5__["KbnNetworkVisLegend"], {
+  }, visParams.showColorLegend && data && Object(_emotion_react__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_legend__WEBPACK_IMPORTED_MODULE_5__["KbnNetworkVisLegend"], {
     colors: data.nodeColors
   }), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
     style: {
@@ -11467,9 +11467,9 @@ function KbnNetworkComponent({
     },
     ref: networkContainerRef
   }));
-} // eslint-disable-next-line import/no-default-export
+}
 
-
+// eslint-disable-next-line import/no-default-export
 /* harmony default export */ __webpack_exports__["default"] = (KbnNetworkComponent);
 
 /***/ }),
@@ -11501,6 +11501,7 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 
 
 function ColorIndicator({
@@ -11549,6 +11550,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 /***/ }),
 
 /***/ "./public/components/legend/kbn_network_vis_legend.tsx":
@@ -11585,6 +11587,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function KbnNetworkVisLegend({
   colors
 }) {
@@ -11606,7 +11609,9 @@ function KbnNetworkVisLegend({
       paddingTop: '0px',
       paddingBottom: '0px'
     }
-  }, Object.keys(colors).map(colorId => Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_0__["EuiFlexGroup"], {
+  }, Object.keys(colors).map(colorId => Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("li", {
+    key: colorId
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_0__["EuiFlexGroup"], {
     alignItems: "center",
     justifyContent: "flexStart",
     gutterSize: "s",
@@ -11645,51 +11650,32 @@ __webpack_require__.r(__webpack_exports__);
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 class NetworkOptions {
   constructor(data) {
     this.data = data;
   }
-
   getEdgeArrowsConfig(visParams) {
+    const block = {
+      enabled: visParams.displayArrow,
+      scaleFactor: visParams.scaleArrow,
+      type: visParams.shapeArrow
+    };
     switch (visParams.posArrow) {
-      case 'from':
-        return {
-          from: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow
-          }
-        };
-
       case 'middle':
         return {
-          middle: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow
-          }
+          middle: block
         };
-
       case 'to':
         return {
-          to: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow
-          }
+          to: block
         };
-
       default:
         return {
-          from: {
-            enabled: visParams.displayArrow,
-            scaleFactor: visParams.scaleArrow,
-            type: visParams.shapeArrow
-          }
+          from: block
         };
     }
   }
-
   from(visParams) {
     return {
       autoResize: true,
@@ -11720,7 +11706,7 @@ class NetworkOptions {
         }
       },
       layout: {
-        improvedLayout: !(this.data.edges.length > 200)
+        improvedLayout: this.data.edges.length <= 200
       },
       interaction: {
         hover: true,
@@ -11731,7 +11717,6 @@ class NetworkOptions {
       }
     };
   }
-
 }
 
 /***/ })

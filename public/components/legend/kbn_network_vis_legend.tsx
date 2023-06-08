@@ -27,7 +27,7 @@ export function KbnNetworkVisLegend({ colors }: KbnNetworkVisLegendProps) {
       <div style={{ width: '100px', maxWidth: '100px', marginLeft: '0px', marginRight: '0px' }}>
         <ul style={{ paddingTop: '0px', paddingBottom: '0px' }}>
           {Object.keys(colors).map((colorId) => (
-            <li>
+            <li key={colorId}>
               <EuiFlexGroup
                 alignItems="center"
                 justifyContent="flexStart"

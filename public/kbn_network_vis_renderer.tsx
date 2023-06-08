@@ -15,36 +15,37 @@
 import React, { lazy } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 
-import { VisualizationContainer } from '../../../src/plugins/visualizations/public';
-import { ExpressionRenderDefinition } from '../../../src/plugins/expressions/common/expression_renderers';
+import { VisualizationContainer } from '@kbn/visualizations-plugin/public';
+import { ExpressionRenderDefinition } from '@kbn/expressions-plugin/common/expression_renderers';
 import { KbnNetworkVisRenderValue } from './kbn_network_vis_fn';
 // @ts-ignore
 const KbnNetworkVisComponent = lazy(() => import('./components/kbn_network_vis_component'));
 
-export const getKbnNetworkVisRenderer: () => ExpressionRenderDefinition<KbnNetworkVisRenderValue> = () => ({
-  name: 'kbn_network',
-  displayName: 'Network visualization',
-  reuseDomNode: true,
-  render: async (domNode, { visData, visParams }, handlers) => {
-    handlers.onDestroy(() => {
-      unmountComponentAtNode(domNode);
-    });
+export const getKbnNetworkVisRenderer: () => ExpressionRenderDefinition<KbnNetworkVisRenderValue> =
+  () => ({
+    name: 'kbn_network',
+    displayName: 'Network visualization',
+    reuseDomNode: true,
+    render: async (domNode, { visData, visParams }, handlers) => {
+      handlers.onDestroy(() => {
+        unmountComponentAtNode(domNode);
+      });
 
-    let error = '';
-    if (visParams.aggs.relation && visParams.aggs.node.length > 1) {
-      error = 'You can only choose Node-Node or Node-Relation';
-    }
+      let error = '';
+      if (visParams.aggs.relation && visParams.aggs.node && visParams.aggs.node.length > 1) {
+        error = 'You can only choose Node-Node or Node-Relation';
+      }
 
-    render(
-      <VisualizationContainer
-        className="kbnNetworkVis"
-        showNoResult={visData.rows.length === 0}
-        error={error}
-        handlers={handlers}
-      >
-        <KbnNetworkVisComponent visParams={visParams} visData={visData} />
-      </VisualizationContainer>,
-      domNode
-    );
-  },
-});
+      render(
+        <VisualizationContainer
+          className="kbnNetworkVis"
+          showNoResult={visData.rows.length === 0}
+          error={error}
+          handlers={handlers}
+        >
+          <KbnNetworkVisComponent visParams={visParams} visData={visData} />
+        </VisualizationContainer>,
+        domNode
+      );
+    },
+  });

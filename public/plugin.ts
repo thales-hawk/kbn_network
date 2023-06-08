@@ -12,18 +12,9 @@
  * limitations under the License.
  */
 
-import { PluginInitializerContext, CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
-import { VisualizationsSetup } from '../../../src/plugins/visualizations/public';
-
-import { DataPublicPluginStart } from '../../../src/plugins/data/public';
-// import {
-//   setFormatService,
-//   setKibanaLegacy,
-//   setNotifications,
-//   setQueryService,
-//   setSearchService,
-// } from './services';
-import { KibanaLegacyStart } from '../../../src/plugins/kibana_legacy/public';
+import { PluginInitializerContext, CoreSetup, CoreStart, Plugin } from '@kbn/core/public';
+import { VisualizationsSetup } from '@kbn/visualizations-plugin/public';
+import { DataPublicPluginStart } from '@kbn/data-plugin/public';
 import { KbnNetworkVisSetupDependencies, KbnNetworkVisStartDependencies } from './types';
 import { getKbnNetworkVisRenderer } from './kbn_network_vis_renderer';
 import { createKbnNetworkVisFn } from './kbn_network_vis_fn';
@@ -37,7 +28,6 @@ export interface TablePluginSetupDependencies {
 /** @internal */
 export interface TablePluginStartDependencies {
   data: DataPublicPluginStart;
-  kibanaLegacy: KibanaLegacyStart;
 }
 
 /** @internal */
@@ -58,11 +48,5 @@ export class KbnNetworkPlugin implements Plugin<Promise<void>, void> {
     expressions.registerRenderer(getKbnNetworkVisRenderer());
   }
 
-  public start(core: CoreStart, {}: KbnNetworkVisStartDependencies) {
-    // setFormatService(data.fieldFormats);
-    // setKibanaLegacy(kibanaLegacy);
-    // setNotifications(core.notifications);
-    // setQueryService(data.query);
-    // setSearchService(data.search);
-  }
+  public start(core: CoreStart, {}: KbnNetworkVisStartDependencies) {}
 }
