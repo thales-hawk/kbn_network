@@ -17,26 +17,30 @@ import { render, unmountComponentAtNode } from 'react-dom';
 
 import { VisualizationContainer } from '@kbn/visualizations-plugin/public';
 import { ExpressionRenderDefinition } from '@kbn/expressions-plugin/common/expression_renderers';
+import { KibanaThemeProvider } from '@kbn/react-kibana-context-theme';
+import { CoreSetup } from '@kbn/core/public';
 import { KbnNetworkVisRenderValue } from './kbn_network_vis_fn';
 // @ts-ignore
 const KbnNetworkVisComponent = lazy(() => import('./components/kbn_network_vis_component'));
 
-export const getKbnNetworkVisRenderer: () => ExpressionRenderDefinition<KbnNetworkVisRenderValue> =
-  () => ({
-    name: 'kbn_network',
-    displayName: 'Network visualization',
-    reuseDomNode: true,
-    render: async (domNode, { visData, visParams }, handlers) => {
-      handlers.onDestroy(() => {
-        unmountComponentAtNode(domNode);
-      });
+export const getKbnNetworkVisRenderer: (
+  coreSetup: CoreSetup
+) => ExpressionRenderDefinition<KbnNetworkVisRenderValue> = (coreSetup) => ({
+  name: 'kbn_network',
+  displayName: 'Network visualization',
+  reuseDomNode: true,
+  render: async (domNode, { visData, visParams }, handlers) => {
+    handlers.onDestroy(() => {
+      unmountComponentAtNode(domNode);
+    });
 
-      let error = '';
-      if (visParams.aggs.relation && visParams.aggs.node && visParams.aggs.node.length > 1) {
-        error = 'You can only choose Node-Node or Node-Relation';
-      }
+    let error = '';
+    if (visParams.aggs.relation && visParams.aggs.node && visParams.aggs.node.length > 1) {
+      error = 'You can only choose Node-Node or Node-Relation';
+    }
 
-      render(
+    render(
+      <KibanaThemeProvider theme={coreSetup.theme}>
         <VisualizationContainer
           className="kbnNetworkVis"
           showNoResult={visData.rows.length === 0}
@@ -44,8 +48,9 @@ export const getKbnNetworkVisRenderer: () => ExpressionRenderDefinition<KbnNetwo
           handlers={handlers}
         >
           <KbnNetworkVisComponent visParams={visParams} visData={visData} />
-        </VisualizationContainer>,
-        domNode
-      );
-    },
-  });
+        </VisualizationContainer>
+      </KibanaThemeProvider>,
+      domNode
+    );
+  },
+});

@@ -1,10 +1,10 @@
 {
   "id": "kbnNetwork",
   "owner": {
-    "name": "dlumbrer",
-    "githubTeam": "dlumbrer"
+    "name": "thales-hawk",
+    "githubTeam": "thales"
   },
-  "version": "8.6.2",
+  "version": "8.17.2",
   "kibanaVersion": "kibana",
   "server": false,
   "ui": true,

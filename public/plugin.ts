@@ -45,7 +45,7 @@ export class KbnNetworkPlugin implements Plugin<Promise<void>, void> {
   ) {
     visualizations.createBaseVisualization(kbnNetworkVisTypeDefinition);
     expressions.registerFunction(createKbnNetworkVisFn());
-    expressions.registerRenderer(getKbnNetworkVisRenderer());
+    expressions.registerRenderer(getKbnNetworkVisRenderer(core));
   }
 
   public start(core: CoreStart, {}: KbnNetworkVisStartDependencies) {}
