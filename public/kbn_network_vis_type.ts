@@ -14,7 +14,11 @@
 
 import { i18n } from '@kbn/i18n';
 import { AggGroupNames } from '@kbn/data-plugin/public';
-import { VisTypeDefinition } from '@kbn/visualizations-plugin/public';
+import {
+  VIS_EVENT_TO_TRIGGER,
+  VisGroups,
+  VisTypeDefinition,
+} from '@kbn/visualizations-plugin/public';
 import './index.scss';
 import image from './images/icon-network.svg';
 import { KbnNetworkVisParamsExp } from './types';
@@ -28,14 +32,15 @@ export const kbnNetworkVisTypeDefinition: VisTypeDefinition<KbnNetworkVisParamsE
     defaultMessage: 'Network',
   }),
   icon: image,
+  group: VisGroups.PROMOTED,
   toExpressionAst,
   requiresSearch: true,
   description: i18n.translate('visTypeKbnNetwork.visDescription', {
     defaultMessage: 'Network plugin for visualizing data as networks',
   }),
-  // getSupportedTriggers: () => {
-  //   return [VIS_EVENT_TO_TRIGGER.filter];
-  // },
+  getSupportedTriggers: () => {
+    return [VIS_EVENT_TO_TRIGGER.filter];
+  },
   visConfig: {
     defaults: {
       showLabels: true,

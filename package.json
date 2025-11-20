@@ -1,6 +1,6 @@
 {
   "name": "kbn_network",
-  "version": "8.17.2",
+  "version": "9.0.4",
   "description": "Network plugin for visualizing networks",
   "authors": [
     "David Moreno Lumbreras <dmorenolumb@gmail.com>",
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "yarn plugin-helpers build",
     "plugin-helpers": "node ../../scripts/plugin_helpers",
-    "kbn": "node ../../scripts/kbn"
+    "kbn": "node ../../scripts/kbn",
+    "dev": "yarn plugin-helpers dev"
   },
   "license": "Apache-2.0",
   "repository": {
@@ -17,11 +18,12 @@
     "url": "https://github.com/thales-hawk/kbn_network"
   },
   "dependencies": {
-    "vis-network": "^9.1.0",
-    "randomcolor": "^0.6.2",
+    "@types/randomcolor": "^0.5.9",
     "keycharm": "^0.2.0",
     "moment": "^2.24.0",
+    "randomcolor": "^0.6.2",
     "vis-data": "^7.1.2",
+    "vis-network": "^9.1.0",
     "vis-util": "^5.0.2"
   }
 }

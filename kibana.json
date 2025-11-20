@@ -4,15 +4,10 @@
     "name": "thales-hawk",
     "githubTeam": "thales"
   },
-  "version": "8.17.2",
+  "version": "9.0.4",
   "kibanaVersion": "kibana",
   "server": false,
   "ui": true,
-  "requiredPlugins": [
-    "visualizations",
-    "expressions",
-    "data"
-  ],
-  "requiredBundles": [
-  ]
+  "requiredPlugins": ["visualizations", "expressions", "data"],
+  "requiredBundles": []
 }
