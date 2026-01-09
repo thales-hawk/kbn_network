@@ -18,12 +18,11 @@
     "url": "https://github.com/thales-hawk/kbn_network"
   },
   "dependencies": {
-    "@types/randomcolor": "^0.5.9",
-    "keycharm": "^0.2.0",
-    "moment": "^2.24.0",
+    "vis-network": "^10.0.2",
     "randomcolor": "^0.6.2",
-    "vis-data": "^7.1.2",
-    "vis-network": "^9.1.0",
-    "vis-util": "^5.0.2"
+    "keycharm": "^0.4.0",
+    "moment": "^2.30.1",
+    "vis-data": "^8.0.3",
+    "vis-util": "^6.0.0"
   }
 }
