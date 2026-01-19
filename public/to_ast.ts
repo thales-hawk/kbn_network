@@ -12,14 +12,15 @@
  * limitations under the License.
  */
 
-import {
+import type {
   EsaggsExpressionFunctionDefinition,
   IndexPatternLoadExpressionFunctionDefinition,
 } from '@kbn/data-plugin/public';
 import { buildExpression, buildExpressionFunction } from '@kbn/expressions-plugin/public';
-import { getVisSchemas, SchemaConfig, Vis } from '@kbn/visualizations-plugin/public';
-import { Arguments, KbnNetworkVisExpressionFunctionDefinition } from './kbn_network_vis_fn';
-import { KbnNetworkVisParamsExp } from './types';
+import type { SchemaConfig, Vis } from '@kbn/visualizations-plugin/public';
+import { getVisSchemas } from '@kbn/visualizations-plugin/public';
+import type { Arguments, KbnNetworkVisExpressionFunctionDefinition } from './kbn_network_vis_fn';
+import type { KbnNetworkVisParamsExp } from './types';
 
 const prepareDimension = (params: SchemaConfig) => {
   const visdimension = buildExpressionFunction('visdimension', { accessor: params.accessor });

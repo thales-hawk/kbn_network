@@ -14,14 +14,11 @@
 
 import { i18n } from '@kbn/i18n';
 import { AggGroupNames } from '@kbn/data-plugin/public';
-import {
-  VIS_EVENT_TO_TRIGGER,
-  VisGroups,
-  VisTypeDefinition,
-} from '@kbn/visualizations-plugin/public';
+import type { VisTypeDefinition } from '@kbn/visualizations-plugin/public';
+import { VIS_EVENT_TO_TRIGGER, VisGroups } from '@kbn/visualizations-plugin/public';
 import './index.scss';
 import image from './images/icon-network.svg';
-import { KbnNetworkVisParamsExp } from './types';
+import type { KbnNetworkVisParamsExp } from './types';
 import { toExpressionAst } from './to_ast';
 import KbnNetworkOptions from './components/editor/kbn_network_vis_options';
 

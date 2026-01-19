@@ -15,10 +15,10 @@
 import React, { lazy } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { VisualizationContainer } from '@kbn/visualizations-plugin/public';
-import { ExpressionRenderDefinition } from '@kbn/expressions-plugin/common/expression_renderers';
+import type { ExpressionRenderDefinition } from '@kbn/expressions-plugin/common/expression_renderers';
 import { KibanaThemeProvider } from '@kbn/react-kibana-context-theme';
-import { CoreSetup } from '@kbn/core/public';
-import { KbnNetworkVisRenderValue } from './kbn_network_vis_fn';
+import type { CoreSetup } from '@kbn/core/public';
+import type { KbnNetworkVisRenderValue } from './kbn_network_vis_fn';
 // @ts-ignore
 const KbnNetworkVisComponent = lazy(() => import('./components/kbn_network_vis_component'));
 

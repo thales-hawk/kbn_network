@@ -17,17 +17,17 @@ randomcolor@^0.6.2:
   resolved "https://registry.npmjs.org/randomcolor/-/randomcolor-0.6.2.tgz"
   integrity sha512-Mn6TbyYpFgwFuQ8KJKqf3bqqY9O1y37/0jgSK/61PUxV4QfIMv0+K2ioq8DfOjkBslcjwSzRfIDEXfzA9aCx7A==
 
-vis-data@^8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-8.0.3.tgz#774cfd1203fb58c159fa35701efee3d7b737088f"
-  integrity sha512-jhnb6rJNqkKR1Qmlay0VuDXY9ZlvAnYN1udsrP4U+krgZEq7C0yNSKdZqmnCe13mdnf9AdVcdDGFOzy2mpPoqw==
+vis-data@7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-7.1.2.tgz#b7d076ac79cb54f7c5e9c80f5b03b93cc8cc1fda"
+  integrity sha512-RPSegFxEcnp3HUEJSzhS2vBdbJ2PSsrYYuhRlpHp2frO/MfRtTYbIkkLZmPkA/Sg3pPfBlR235gcoKbtdm4mbw==
 
-vis-network@^10.0.2:
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-10.0.2.tgz#cf8ea2c6a06d32612d90c1aac14def1432112484"
-  integrity sha512-qPl8GLYBeHEFqiTqp4VBbYQIJ2EA8KLr7TstA2E8nJxfEHaKCU81hQLz7hhq11NUpHbMaRzBjW5uZpVKJ45/wA==
+vis-network@9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-9.1.2.tgz#ddaca300a9764bbf1646a0aa03eb28fe55823ca8"
+  integrity sha512-BdapguKg7sk3NvdZaDsM7T6rNhOBFz0/F4ZScxctK4klRzQPLQPTEcmbioXaZhMkkgWymzBR3lFCxL1q+eYyAw==
 
-vis-util@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/vis-util/-/vis-util-6.0.0.tgz#5cad6cbc950c7b2e809a0a14ae5c2c8ca62262b5"
-  integrity sha512-qtpts3HRma0zPe4bO7t9A2uejkRNj8Z2Tb6do6lN85iPNWExFkUiVhdAq5uLGIUqBFduyYeqWJKv/jMkxX0R5g==
+vis-util@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/vis-util/-/vis-util-5.0.3.tgz#6a9d67c6ed92f2bfa67e50c20166bb5f59ac07bf"
+  integrity sha512-Wf9STUcFrDzK4/Zr7B6epW2Kvm3ORNWF+WiwEz2dpf5RdWkLUXFSbLcuB88n1W6tCdFwVN+v3V4/Xmn9PeL39g==

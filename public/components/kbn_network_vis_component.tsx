@@ -15,10 +15,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import _ from 'lodash';
 import { Network } from 'vis-network';
-import { Datatable } from '@kbn/expressions-plugin/common';
+import type { Datatable } from '@kbn/expressions-plugin/common';
 import { NetworkData } from '../lib/network_data';
 import { NetworkOptions } from '../lib/network_options';
-import { KbnNetworkVisParams } from '../types';
+import type { KbnNetworkVisParams } from '../types';
 import { KbnNetworkVisLegend } from './legend';
 
 interface KbnNetworkComponentProps {

@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-import { PluginInitializerContext, CoreSetup, CoreStart, Plugin } from '@kbn/core/public';
-import { VisualizationsSetup } from '@kbn/visualizations-plugin/public';
-import { DataPublicPluginStart } from '@kbn/data-plugin/public';
-import { KbnNetworkVisSetupDependencies, KbnNetworkVisStartDependencies } from './types';
+import type { PluginInitializerContext, CoreSetup, CoreStart, Plugin } from '@kbn/core/public';
+import type { VisualizationsSetup } from '@kbn/visualizations-plugin/public';
+import type { DataPublicPluginStart } from '@kbn/data-plugin/public';
+import type { KbnNetworkVisSetupDependencies, KbnNetworkVisStartDependencies } from './types';
 import { getKbnNetworkVisRenderer } from './kbn_network_vis_renderer';
 import { createKbnNetworkVisFn } from './kbn_network_vis_fn';
 import { kbnNetworkVisTypeDefinition } from './kbn_network_vis_type';

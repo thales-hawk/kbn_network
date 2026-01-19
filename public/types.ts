@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-import { ExpressionsSetup } from '@kbn/expressions-plugin/public';
-import { SchemaConfig } from '@kbn/visualizations-plugin/public';
-import { VisualizationsSetup } from '@kbn/visualizations-plugin/public/plugin';
+import type { ExpressionsSetup } from '@kbn/expressions-plugin/public';
+import type { SchemaConfig } from '@kbn/visualizations-plugin/public';
+import type { VisualizationsSetup } from '@kbn/visualizations-plugin/public/plugin';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface KbnNetworkVisParamsExp {}
