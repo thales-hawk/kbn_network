@@ -4,12 +4,12 @@
 
 keycharm@^0.4.0:
   version "0.4.0"
-  resolved "https://registry.yarnpkg.com/keycharm/-/keycharm-0.4.0.tgz#8d684ea9cc01379a07fbddee33ff32d97f5ae2a7"
+  resolved "https://registry.npmjs.org/keycharm/-/keycharm-0.4.0.tgz"
   integrity sha512-TyQTtsabOVv3MeOpR92sIKk/br9wxS+zGj4BG7CR8YbK4jM3tyIBaF0zhzeBUMx36/Q/iQLOKKOT+3jOQtemRQ==
 
 moment@^2.30.1:
   version "2.30.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.30.1.tgz"
   integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
 randomcolor@^0.6.2:
@@ -19,15 +19,15 @@ randomcolor@^0.6.2:
 
 vis-data@7.1.2:
   version "7.1.2"
-  resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-7.1.2.tgz#b7d076ac79cb54f7c5e9c80f5b03b93cc8cc1fda"
+  resolved "https://registry.npmjs.org/vis-data/-/vis-data-7.1.2.tgz"
   integrity sha512-RPSegFxEcnp3HUEJSzhS2vBdbJ2PSsrYYuhRlpHp2frO/MfRtTYbIkkLZmPkA/Sg3pPfBlR235gcoKbtdm4mbw==
 
 vis-network@9.1.2:
   version "9.1.2"
-  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-9.1.2.tgz#ddaca300a9764bbf1646a0aa03eb28fe55823ca8"
+  resolved "https://registry.npmjs.org/vis-network/-/vis-network-9.1.2.tgz"
   integrity sha512-BdapguKg7sk3NvdZaDsM7T6rNhOBFz0/F4ZScxctK4klRzQPLQPTEcmbioXaZhMkkgWymzBR3lFCxL1q+eYyAw==
 
 vis-util@5.0.3:
   version "5.0.3"
-  resolved "https://registry.yarnpkg.com/vis-util/-/vis-util-5.0.3.tgz#6a9d67c6ed92f2bfa67e50c20166bb5f59ac07bf"
+  resolved "https://registry.npmjs.org/vis-util/-/vis-util-5.0.3.tgz"
   integrity sha512-Wf9STUcFrDzK4/Zr7B6epW2Kvm3ORNWF+WiwEz2dpf5RdWkLUXFSbLcuB88n1W6tCdFwVN+v3V4/Xmn9PeL39g==
